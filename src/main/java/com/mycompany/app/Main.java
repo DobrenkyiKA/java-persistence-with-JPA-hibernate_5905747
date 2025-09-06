@@ -741,7 +741,7 @@ public class Main {
       results.forEach(o -> System.out.println(o));
 
       // ---update---
-      result.setPrice(b.getPrice().add(new BigDecimal(100)));
+      result.setPrice(new BigDecimal(100));
 
       repository.update(result);
 
