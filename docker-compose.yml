@@ -1,0 +1,16 @@
+services:
+  art_class_maria_db:
+    image: mariadb:latest
+    container_name: art_class_maria_db
+    ports: ["3307:3306"]
+    volumes:
+      - art_class_volume:/var/lib/mysql
+
+    environment:
+      MARIADB_USER: user
+      MARIADB_PASSWORD: password
+      MARIADB_DATABASE: artclass
+      MARIADB_ROOT_PASSWORD: password
+
+volumes:
+  art_class_volume:
